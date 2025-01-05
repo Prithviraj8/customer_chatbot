@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
+    "http://customerchatbot-production.up.railway.app:8080",
     "http://localhost:3000",
     "https://*.vercel.app"
 ]
