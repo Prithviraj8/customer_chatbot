@@ -27,11 +27,32 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CORS_ALLOWED_ORIGINS = [
-    "http://customerchatbot-production.up.railway.app:8080",
+    "httsp://customerchatbot-production.up.railway.app",
     "http://localhost:3000",
     "https://*.vercel.app"
 ]
 CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app']
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "https://*.vercel.app",
+]
+
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "OPTIONS",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "origin",
+    "dnt",
+    "user-agent",
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
