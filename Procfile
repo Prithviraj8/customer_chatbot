@@ -1,1 +1,1 @@
-web: python manage.py makemigrations customer_support && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn settings_config.wsgi
+web: python manage.py makemigrations customer_support && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn settings_config.wsgi --log-file=- --log-level=debug --timeout=120 --workers=2
