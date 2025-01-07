@@ -26,18 +26,13 @@ SECRET_KEY = "django-insecure-gjghmpnmt2w7lrz&!un+!mter@hrg1_n)6axi#k-u#s-4ky(2r
 DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-CORS_ALLOWED_ORIGINS = [
-    "httsp://customerchatbot-production.up.railway.app",
-    "http://localhost:3000",
-    "https://*.vercel.app"
-]
 CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://*.vercel.app",
+    "https://customerchatbot-production.up.railway.app"
 ]
-
 CORS_ALLOW_METHODS = [
     "GET",
     "POST",
@@ -67,10 +62,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
